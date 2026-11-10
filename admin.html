@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin – Kebab Haus Bogen (DEMO VERSION)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FFC400'/%3E%3Ctext x='32' y='44' font-size='30' font-weight='900' text-anchor='middle' fill='%23101010' font-family='Arial'%3EKH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+ 
+<main id="login" class="center" hidden>
+ <form id="lf" class="box login" autocomplete="off">
+  <span class="demo">DEMO VERSION</span>
+  <div class="logo"><span class="logo-mark">KH</span><span class="logo-txt">Kebab Haus<small>BOGEN</small></span></div>
+  <h1>Admin-Login</h1>
+  <label>Benutzername<input id="lu" required autocomplete="username"></label>
+  <label>Passwort<input id="lp" type="password" required autocomplete="current-password"></label>
+  <p id="lerr" class="err" hidden>Benutzername oder Passwort ist falsch.</p>
+  <button class="btn btn-y" type="submit">Anmelden</button>
+  <a class="back" href="index.html">← Zurück zur Website</a>
+  <p class="hint">Demo-Zugang: admin / 123 – keine echte Sicherheit.</p>
+ </form>
+</main>
+ 
+<div id="app" hidden>
+ <header class="bar">
+  <div class="wrap row">
+   <div class="logo"><span class="logo-mark">KH</span><span class="logo-txt">Kebab Haus<small>BOGEN</small></span></div>
+   <span class="demo">DEMO VERSION</span>
+   <div class="spacer"></div>
+   <a class="btn btn-o sm" href="index.html" target="_blank" rel="noopener">Website ansehen</a>
+   <button class="btn btn-o sm" id="logout" type="button">Abmelden</button>
+  </div>
+ </header>
+ <main class="wrap">
+  <div class="head">
+   <div><h1>Speisekarte verwalten</h1><p class="mut">Änderungen erscheinen sofort auf der Website.</p></div>
+   <button class="btn btn-y" id="add" type="button">+ Gericht hinzufügen</button>
+  </div>
+  <div id="list" class="list"></div>
+ </main>
+</div>
+ 
+<dialog id="dlg">
+ <form id="df" class="box">
+  <h2 id="dt">Neues Gericht</h2>
+  <label>Name der Speise<input id="fn" required maxlength="60"></label>
+  <label>Beschreibung<textarea id="fd" rows="3" maxlength="200"></textarea></label>
+  <div class="two">
+   <label>Preis €<input id="fp" inputmode="decimal" placeholder="7,50" required></label>
+   <label>Kategorie<select id="fc"></select></label>
+  </div>
+  <label>Bild hochladen<input id="fi" type="file" accept="image/*"></label>
+  <img id="prev" alt="Bildvorschau" hidden>
+  <p id="ferr" class="err" hidden></p>
+  <div class="row end">
+   <button class="btn btn-o" id="cancel" type="button">Abbrechen</button>
+   <button class="btn btn-y" type="submit">Speichern</button>
+  </div>
+ </form>
+</dialog>
+<div id="toast" role="status"></div>
+<script src="menu.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
+ 

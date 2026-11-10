@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebab Haus Bogen – Döner, Dürüm & Turkish Fast Food in Bogen</title>
+<meta name="description" content="Kebab Haus Bogen am Stadtplatz 27 in 94327 Bogen: Döner, Dürüm und türkisches Fast Food. Täglich Montag bis Sonntag. Jetzt Speisekarte ansehen und Route planen.">
+<meta name="theme-color" content="#101010">
+<meta property="og:title" content="Kebab Haus Bogen – Echter Geschmack. Frischer Döner.">
+<meta property="og:description" content="Döner, Dürüm und Turkish Fast Food am Stadtplatz 27 in Bogen.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FFC400'/%3E%3Ctext x='32' y='44' font-size='30' font-weight='900' text-anchor='middle' fill='%23101010' font-family='Arial'%3EKH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Kebab Haus Bogen","servesCuisine":["Döner","Dürüm","Turkish Fast Food"],"address":{"@type":"PostalAddress","streetAddress":"Stadtplatz 27","postalCode":"94327","addressLocality":"Bogen","addressCountry":"DE"}}</script>
+<style>
+:root{--bg:#101010;--bg2:#1B1B1B;--gold:#FFC400;--tx:#fff;--mut:#BDBDBD;--line:rgba(255,255,255,.09);--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--tx);font-family:'Manrope',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+section{padding:110px 0}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em;line-height:1.05;text-transform:uppercase}
+h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:14px}
+.lead{color:var(--mut);max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:800;font-size:.95rem;border:2px solid var(--gold);cursor:pointer;transition:.25s;font-family:inherit}
+.btn-y{background:var(--gold);color:#101010}
+.btn-y:hover{background:#ffd43b;transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,196,0,.3)}
+.btn-o{background:transparent;color:var(--tx);border-color:rgba(255,255,255,.35)}
+.btn-o:hover{border-color:var(--gold);color:var(--gold)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:44px;height:44px;border-radius:12px;background:var(--gold);color:#101010;display:grid;place-items:center;font-family:'Anton';font-size:1.35rem;transform:rotate(-6deg);flex:none}
+.logo-txt{font-family:'Anton';text-transform:uppercase;font-size:1.15rem;line-height:1.05;letter-spacing:.03em}
+.logo-txt small{display:block;font-family:'Manrope';font-size:.68rem;color:var(--mut);letter-spacing:.14em;font-weight:700}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;padding:16px 0}
+header.sc{background:rgba(16,16,16,.92);backdrop-filter:blur(14px);padding:10px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav ul{display:flex;gap:30px;list-style:none}
+.nav ul a{font-weight:700;font-size:.92rem;color:#e8e8e8;position:relative;padding:4px 0}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--gold);transition:.25s}
+.nav ul a:hover::after{width:100%}
+.nav .btn{padding:11px 22px;font-size:.88rem}
+.mob{display:none}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:2px;background:#fff;transition:.3s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger.on span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){top:21px;transform:rotate(-45deg)}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;padding:130px 0 90px;overflow:hidden;background:#1B1B1B}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:zoom 18s ease-out both}
+@keyframes zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,16,16,.95) 0%,rgba(16,16,16,.7) 55%,rgba(16,16,16,.35) 100%),linear-gradient(0deg,#101010 0%,transparent 35%)}
+.hero .wrap{position:relative;z-index:2}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,196,0,.5);color:var(--gold);padding:7px 16px;border-radius:999px;font-weight:700;font-size:.85rem;background:rgba(255,196,0,.08);margin-bottom:26px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(255,196,0,.25)}
+.hero h1{font-size:clamp(3.2rem,10.5vw,8.6rem);line-height:.95;max-width:11ch}
+.hero h1 span{display:block;color:var(--gold)}
+.hero p{font-size:clamp(1.05rem,2vw,1.3rem);color:#e0e0e0;max-width:46ch;margin:26px 0 38px}
+.hero .row{display:flex;flex-wrap:wrap;gap:14px}
+.hero h1,.hero p,.hero .row,.badge{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.badge{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero p{animation-delay:.3s}.hero .row{animation-delay:.45s}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+/* features */
+.features{background:var(--bg2);padding:80px 0}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fcard{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:36px 30px;transition:.3s}
+.fcard:hover{border-color:var(--gold);transform:translateY(-6px)}
+.fic{width:58px;height:58px;border-radius:16px;background:rgba(255,196,0,.12);display:grid;place-items:center;margin-bottom:22px}
+.fic svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fcard h3{font-size:1.7rem;margin-bottom:10px}
+.fcard p{color:var(--mut);font-size:.97rem}
+/* menu */
+.mhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:28px;margin-bottom:30px}
+.filters{display:flex;flex-wrap:wrap;gap:10px}
+.fb{background:var(--bg2);color:var(--mut);border:1px solid var(--line);padding:11px 22px;border-radius:999px;font:700 .9rem 'Manrope';cursor:pointer;transition:.25s}
+.fb:hover{color:#fff;border-color:rgba(255,196,0,.5)}
+.fb.on{background:var(--gold);color:#101010;border-color:var(--gold)}
+.demo-note{background:rgba(255,196,0,.08);border:1px dashed rgba(255,196,0,.5);border-radius:14px;padding:14px 18px;font-size:.9rem;color:#e8d9a6;margin-bottom:36px}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px}
+.mcard{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.35s;display:flex;flex-direction:column}
+.mcard:hover{transform:translateY(-8px);border-color:rgba(255,196,0,.6);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+.mcard.hide{display:none}
+.mimg{aspect-ratio:4/3;overflow:hidden;background:#242424;position:relative}
+.mimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.mcard:hover .mimg img{transform:scale(1.08)}
+.tag{position:absolute;top:12px;left:12px;background:rgba(16,16,16,.85);border:1px solid rgba(255,196,0,.5);color:var(--gold);font-size:.72rem;font-weight:800;padding:4px 11px;border-radius:999px}
+.mbody{padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.mtop{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.mbody h3{font-size:1.4rem}
+.price{color:var(--gold);font-weight:800;white-space:nowrap}
+.mbody p{color:var(--mut);font-size:.92rem}
+.ph{display:grid;place-items:center;width:100%;height:100%;font-size:3.2rem;background:linear-gradient(135deg,#2a2a2a,#161616)}
+/* gallery */
+.gal{background:var(--bg2)}
+.ggrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:16px;margin-top:40px}
+.gi{position:relative;border-radius:var(--r);overflow:hidden;background:#242424}
+.gi:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gi:nth-child(4){grid-column:span 2}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gi:hover img{transform:scale(1.07)}
+.gi span{position:absolute;left:0;right:0;bottom:0;padding:50px 20px 18px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);font-family:'Anton';text-transform:uppercase;font-size:1.3rem;letter-spacing:.04em}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:#242424;position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-img::after{content:"";position:absolute;inset:14px;border:2px solid var(--gold);border-radius:14px;pointer-events:none;opacity:.8}
+.about p{color:var(--mut);margin-bottom:18px;max-width:56ch}
+.about .btn{margin-top:10px}
+/* contact */
+.contact{background:var(--bg2)}
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;margin-top:40px}
+.cbox{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:38px}
+.cbox h3{font-size:1.9rem;margin-bottom:18px;color:var(--gold)}
+.cbox address{font-style:normal;font-size:1.1rem;line-height:1.8;margin-bottom:22px}
+.cbox .days{color:var(--mut);margin-bottom:26px;padding-top:20px;border-top:1px solid var(--line)}
+.cbox .days b{color:#fff}
+.cbox .row{display:flex;flex-wrap:wrap;gap:12px}
+.mapcard{border-radius:var(--r);min-height:340px;border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:30px;background:radial-gradient(circle at 30% 20%,rgba(255,196,0,.14),transparent 55%),repeating-linear-gradient(45deg,#141414 0 22px,#171717 22px 44px)}
+.pin{width:64px;height:64px;border-radius:50% 50% 50% 0;background:var(--gold);transform:rotate(-45deg);margin:0 auto 26px;display:grid;place-items:center;animation:bob 2.4s ease-in-out infinite}
+.pin::after{content:"";width:22px;height:22px;border-radius:50%;background:#101010}
+@keyframes bob{50%{translate:0 -8px}}
+.mapcard p{color:var(--mut);margin:6px 0 22px}
+.mapcard strong{font-family:'Anton';font-size:1.7rem;text-transform:uppercase;font-weight:400}
+/* footer */
+footer{padding:70px 0 30px;border-top:1px solid var(--line)}
+.fgr{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:46px}
+footer h4{font-family:'Anton';font-weight:400;text-transform:uppercase;letter-spacing:.05em;font-size:1.1rem;margin-bottom:14px;color:var(--gold)}
+footer li{list-style:none;margin-bottom:8px}
+footer li a,footer address,footer p{color:var(--mut);font-style:normal;font-size:.95rem}
+footer li a:hover{color:var(--gold)}
+.fbot{border-top:1px solid var(--line);padding-top:24px;color:var(--mut);font-size:.85rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.fgr .logo{margin-bottom:16px}
+/* reveal (one orchestrated, light touch) */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+/* responsive */
+@media(max-width:960px){
+ section{padding:80px 0}
+ .burger{display:block}
+ .mob{display:list-item}
+ .nav .btn.hd{display:none}
+ .nav ul{position:fixed;inset:0 0 0 auto;width:min(80%,330px);background:#141414;flex-direction:column;gap:6px;padding:100px 30px 30px;transform:translateX(100%);transition:.35s;border-left:1px solid var(--line)}
+ .nav ul.open{transform:none}
+ .nav ul a{font-size:1.2rem;display:block;padding:12px 0}
+ .burger{z-index:60}
+ .fgrid,.about,.cgrid{grid-template-columns:1fr}
+ .about{gap:40px}
+ .ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
+ .gi:nth-child(1){grid-column:span 2;grid-row:span 2}
+ .gi:nth-child(4){grid-column:span 2}
+ .fgr{grid-template-columns:1fr 1fr}.fgr>div:first-child{grid-column:span 2}
+}
+@media(max-width:520px){
+ .logo-txt small{display:none}
+ .hero .btn{width:100%}
+ .cbox{padding:28px 22px}
+ .fgr{grid-template-columns:1fr}.fgr>div:first-child{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+ 
+<header id="hd">
+ <div class="wrap nav">
+  <a href="#start" class="logo" aria-label="Kebab Haus Bogen – Startseite">
+   <span class="logo-mark">KH</span>
+   <span class="logo-txt">Kebab Haus<small>BOGEN</small></span>
+  </a>
+  <ul id="menu">
+   <li><a href="#start">Startseite</a></li>
+   <li><a href="#speisekarte">Speisekarte</a></li>
+   <li><a href="#galerie">Galerie</a></li>
+   <li><a href="#ueber-uns">Über uns</a></li>
+   <li><a href="#kontakt">Kontakt</a></li>
+   <li class="mob"><a href="admin.html">Admin</a></li>
+  </ul>
+  <a href="admin.html" class="btn btn-o hd">Admin</a>
+  <a href="#speisekarte" class="btn btn-y hd">Speisekarte ansehen</a>
+  <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+ </div>
+</header>
+ 
+<main>
+<section class="hero" id="start">
+ <img class="hero-img" data-img="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1800&q=75" alt="Frisch zubereiteter Döner Kebab" fetchpriority="high">
+ <div class="wrap">
+  <div class="badge"><i></i>Stadtplatz 27 · Bogen</div>
+  <h1>Echter Geschmack. <span>Frischer Döner.</span></h1>
+  <p>Frisch zubereitet. Mit Liebe serviert. Willkommen bei Kebab Haus Bogen.</p>
+  <div class="row">
+   <a href="#speisekarte" class="btn btn-y">Speisekarte entdecken</a>
+   <a href="https://www.google.com/maps/dir/?api=1&destination=Stadtplatz+27,+94327+Bogen,+Germany" target="_blank" rel="noopener" class="btn btn-o">Route planen</a>
+  </div>
+ </div>
+</section>
+ 
+<section class="features">
+ <div class="wrap fgrid">
+  <article class="fcard rv">
+   <div class="fic"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .5 1.5 1.5 2 2 2 0-3-1-5 1-8z"/></svg></div>
+   <h3>Frisch zubereitet</h3><p>Döner und Dürüm werden für dich zubereitet und direkt serviert.</p>
+  </article>
+  <article class="fcard rv">
+   <div class="fic"><svg viewBox="0 0 24 24"><path d="M5 20c0-9 5-15 15-16 0 10-6 15-15 16z"/><path d="M5 20c3-5 6-8 10-10"/></svg></div>
+   <h3>Knackiger Salat</h3><p>Salat, Tomaten und Zwiebeln für den frischen Biss in jedem Döner.</p>
+  </article>
+  <article class="fcard rv">
+   <div class="fic"><svg viewBox="0 0 24 24"><path d="M9 3h6v3l2 4v10a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V10l2-4z"/><path d="M7 13h10"/></svg></div>
+   <h3>Hausgemachte Soßen</h3><p>Kräuter-, Knoblauch- oder scharfe Soße – du wählst deinen Geschmack.</p>
+  </article>
+ </div>
+</section>
+ 
+<section id="speisekarte">
+ <div class="wrap">
+  <div class="mhead">
+   <div class="rv"><h2>Speisekarte</h2><p class="lead">Wähle eine Kategorie und finde dein Lieblingsgericht.</p></div>
+   <div class="filters rv" role="group" aria-label="Kategorien filtern">
+    <button class="fb on" data-f="all">Alle Gerichte</button>
+    <button class="fb" data-f="doener">Döner &amp; Dürüm</button>
+    <button class="fb" data-f="teller">Teller-Gerichte</button>
+    <button class="fb" data-f="drinks">Getränke</button>
+   </div>
+  </div>
+  <p class="demo-note"><b>Demo-Inhalt:</b> Alle Gerichte, Beschreibungen und Preise auf dieser Seite sind Beispiele für die Präsentation und keine bestätigten Angaben des Restaurants.</p>
+  <div class="mgrid" id="mgrid"></div>
+ </div>
+</section>
+ 
+<section class="gal" id="galerie">
+ <div class="wrap">
+  <div class="rv"><h2>Galerie</h2><p class="lead">Döner, Dürüm, Pommes und Teller – ein Blick auf den Genuss.</p></div>
+  <div class="ggrid">
+   <figure class="gi"><img data-img="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1000&q=75" alt="Döner im Fladenbrot"><span>Döner</span></figure>
+   <figure class="gi"><img data-img="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=700&q=75" alt="Dürüm Wrap"><span>Dürüm</span></figure>
+   <figure class="gi"><img data-img="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=700&q=75" alt="Pommes frites"><span>Pommes</span></figure>
+   <figure class="gi"><img data-img="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=75" alt="Teller mit Fleisch und Beilagen"><span>Teller-Gerichte</span></figure>
+  </div>
+ </div>
+</section>
+ 
+<section id="ueber-uns">
+ <div class="wrap about">
+  <div class="about-img rv"><img data-img="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=900&q=75" alt="Döner Kebab mit frischem Salat"></div>
+  <div class="rv">
+   <h2>Willkommen bei Kebab Haus Bogen</h2>
+   <p>Mitten am Stadtplatz in Bogen findest du uns mit Döner, Dürüm und türkischem Fast Food. Ob schnell zwischendurch, nach dem Einkauf oder als Stärkung am Abend – bei uns bekommst du ein Essen, das satt macht und schmeckt.</p>
+   <p>Wir freuen uns auf deinen Besuch, jeden Tag von Montag bis Sonntag. Schau vorbei, such dir deinen Favoriten aus und lass es dir schmecken.</p>
+   <a href="#kontakt" class="btn btn-y">So findest du uns</a>
+  </div>
+ </div>
+</section>
+ 
+<section class="contact" id="kontakt">
+ <div class="wrap">
+  <div class="rv"><h2>Besuch uns in Bogen</h2><p class="lead">Direkt am Stadtplatz – wir freuen uns auf dich.</p></div>
+  <div class="cgrid">
+   <div class="cbox rv">
+    <h3>Kebab Haus Bogen</h3>
+    <address>Stadtplatz 27<br>94327 Bogen<br>Deutschland</address>
+    <p class="days"><b>Geöffnet:</b> Montag – Sonntag</p>
+    <div class="row">
+     <a class="btn btn-y" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Stadtplatz+27,+94327+Bogen,+Germany">Route planen</a>
+     <a class="btn btn-o" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kebab+Haus+Bogen+Stadtplatz+27+94327+Bogen">In Google Maps öffnen</a>
+    </div>
+   </div>
+   <div class="mapcard rv">
+    <div>
+     <div class="pin"></div>
+     <strong>Stadtplatz 27</strong>
+     <p>94327 Bogen</p>
+     <a class="btn btn-y" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Stadtplatz+27+94327+Bogen+Germany">Karte ansehen</a>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+ 
+<footer>
+ <div class="wrap">
+  <div class="fgr">
+   <div>
+    <a href="#start" class="logo"><span class="logo-mark">KH</span><span class="logo-txt">Kebab Haus<small>BOGEN</small></span></a>
+    <p>Döner, Dürüm und Turkish Fast Food in Bogen.</p>
+   </div>
+   <div>
+    <h4>Navigation</h4>
+    <ul>
+     <li><a href="#start">Startseite</a></li>
+     <li><a href="#speisekarte">Speisekarte</a></li>
+     <li><a href="#galerie">Galerie</a></li>
+     <li><a href="#ueber-uns">Über uns</a></li>
+     <li><a href="#kontakt">Kontakt</a></li>
+     <li><a href="admin.html">Admin</a></li>
+    </ul>
+   </div>
+   <div>
+    <h4>Kontakt</h4>
+    <address>Kebab Haus Bogen<br>Stadtplatz 27<br>94327 Bogen<br>Deutschland</address>
+    <p style="margin-top:10px">Geöffnet: Montag – Sonntag</p>
+   </div>
+  </div>
+  <div class="fbot"><span>© 2026 Kebab Haus Bogen</span><span>Demo-Webseite zu Präsentationszwecken</span></div>
+ </div>
+</footer>
+ 
+<script src="menu.js"></script>
+<script>
+(function(){
+ var M=window.KHMenu,g=document.getElementById('mgrid'),cur='all';
+ function fb(img){img.onerror=null;var p=img.parentNode,d=document.createElement('div');d.className='ph';d.textContent=img.dataset.e||'🥙';d.setAttribute('role','img');d.setAttribute('aria-label',img.alt);p.replaceChild(d,img)}
+ function load(img){img.onerror=function(){fb(img)};img.src=img.dataset.img}
+ function apply(){g.querySelectorAll('.mcard').forEach(function(c){c.classList.toggle('hide',cur!=='all'&&c.dataset.c!==cur)})}
+ function render(){
+  var items=M.load(),e=M.esc;
+  g.innerHTML=items.length?items.map(function(x){
+   var em=M.EMOJI[x.c]||'🥙';
+   return '<article class="mcard" data-c="'+e(x.c)+'"><div class="mimg">'+(x.img?'<img data-img="'+e(x.img)+'" data-e="'+em+'" alt="'+e(x.n)+'" loading="lazy" width="700" height="525">':'<div class="ph">'+em+'</div>')+'<span class="tag">Demo</span></div><div class="mbody"><div class="mtop"><h3>'+e(x.n)+'</h3><span class="price">'+M.fmt(x.p)+'</span></div><p>'+e(x.d)+'</p></div></article>'}).join(''):'<p class="lead">Aktuell sind keine Gerichte vorhanden.</p>';
+  g.querySelectorAll('img[data-img]').forEach(load);
+  apply();
+ }
+ document.querySelectorAll('.hero-img,.gi img,.about-img img').forEach(function(im){if(im.getAttribute('fetchpriority')!=='high')im.loading='lazy';load(im)});
+ render();
+ window.addEventListener('storage',function(e){if(e.key===M.KEY)render()});
+ var btns=document.querySelectorAll('.fb');
+ btns.forEach(function(b){b.addEventListener('click',function(){
+  btns.forEach(function(o){o.classList.remove('on')});b.classList.add('on');cur=b.dataset.f;apply();
+ })});
+ // header + menu
+ var hd=document.getElementById('hd'),bg=document.getElementById('burger'),mn=document.getElementById('menu');
+ function sc(){hd.classList.toggle('sc',window.scrollY>40)}sc();window.addEventListener('scroll',sc,{passive:true});
+ function tog(o){mn.classList.toggle('open',o);bg.classList.toggle('on',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen')}
+ bg.addEventListener('click',function(){tog(!mn.classList.contains('open'))});
+ mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){tog(false)})});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')tog(false)});
+ // reveal
+ var rv=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});rv.forEach(function(el){io.observe(el)})}
+ else rv.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>
+ 
